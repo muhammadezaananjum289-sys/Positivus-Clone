@@ -1,0 +1,577 @@
+:root {
+    --primary-green: #B9FF66;
+    --dark-bg: #191A23;
+    --light-grey: #F3F3F3;
+    --grey-text: #292A33;
+    --text-black: #000;
+    --white: #fff;
+    --footer-box-bg: #292A33;
+    --link-hover-green: #B9FF66;
+    --accordion-light-bg: #f4f4f4;
+    --accordion-active-green: #b6ff66;
+    --footer-line-color: #444; 
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-black);
+    overflow-x: hidden;
+}
+
+/* --- Section Headings Wrapper --- */
+.section-heading-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.section-heading {
+    background-color: var(--primary-green);
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.section-subtext {
+    max-width: 500px;
+    font-size: 1rem;
+    color: var(--grey-text);
+    text-align: center;
+}
+
+/* --- Contact Badge --- */
+span.contact-badge {
+    background: var(--primary-green);
+    color: var(--text-black);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-primary-custom {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    border: 1px solid var(--dark-bg);
+    padding: 12px 35px;
+    border-radius: 14px;
+    transition: 0.3s;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--dark-bg);
+    color: var(--dark-bg);
+    padding: 12px 28px;
+    border-radius: 14px;
+    transition: 0.3s;
+    /* ADDED SPACE */
+    margin-bottom: 10px; 
+}
+
+/* --- Button Hover States --- */
+.btn-primary-custom:hover {
+    background-color: transparent;
+    color: var(--dark-bg);
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--primary-green);
+    color: var(--text-black);
+}
+
+/* --- Navbar --- */
+.navbar {
+    padding: 15px 0;
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-link {
+    color: var(--text-black) !important;
+    font-weight: 500;
+    margin: 5px 0;
+    text-align: center;
+}
+.navbar-collapse {
+    background: var(--white);
+    z-index: 1000;
+    padding-bottom: 20px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 30px 0;
+}
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.hero-desc {
+    text-align: center;
+}
+.hero-img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* --- Logos Strip --- */
+.logo-strip {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 0;
+}
+.logo-item {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+.service-card {
+    border: 1px solid var(--dark-bg);
+    border-radius: 30px;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 5px 0 var(--dark-bg);
+    min-height: 250px;
+}
+.card-grey {
+    background-color: var(--light-grey);
+}
+.card-green {
+    background-color: var(--primary-green);
+}
+.card-dark {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+.service-label-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.service-label {
+    background-color: var(--primary-green);
+    padding: 2px 10px;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.card-green .service-label {
+    background-color: var(--white);
+}
+.card-dark .service-label {
+    background-color: var(--white);
+    color: var(--text-black);
+}
+
+.service-icon-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-bg);
+    color: var(--primary-green);
+    text-decoration: none;
+    transform: rotate(-30deg);
+    transition: 0.3s;
+    align-self: flex-end;
+}
+.service-icon-link:hover {
+    transform: rotate(0deg);
+}
+.card-dark .service-icon-link {
+    background-color: var(--white);
+    color: var(--text-black);
+}
+
+.service-bg-img {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px;
+    display: none;
+}
+
+.accordion-item {
+    border: 1px solid var(--dark-bg);
+    border-radius: 30px !important;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 0 var(--dark-bg);
+}
+.accordion-button {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--light-grey);
+    padding: 20px;
+    color: var(--text-black);
+    align-items: center;
+}
+.process-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-green);
+    color: var(--text-black);
+    box-shadow: none;
+}
+.accordion-body {
+    border-top: 1px solid var(--dark-bg);
+    padding: 20px;
+    background-color: var(--primary-green);
+}
+
+.custom-acc .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.08);
+    background: var(--accordion-light-bg);
+}
+.custom-acc .accordion-button {
+    padding: 26px;
+    font-size: 20px;
+    border-radius: 16px !important;
+    background: var(--accordion-light-bg);
+    gap: 10px;
+}
+.acc-number {
+    font-size: 26px;
+    font-weight: 700;
+}
+.custom-acc .accordion-button::after {
+    content: '+';
+    font-size: 30px;
+    background-image: none !important;
+    transform: none !important;
+}
+.custom-acc .accordion-button:not(.collapsed)::after {
+    content: '–';
+    font-size: 38px;
+}
+.custom-acc .accordion-button:not(.collapsed) {
+    background: var(--accordion-active-green) !important;
+    color: var(--text-black);
+}
+.custom-acc .accordion-body {
+    background: var(--accordion-active-green);
+    padding: 18px 26px 26px;
+    font-size: 15px;
+    line-height: 1.6;
+    border-top: 1px solid #d0d0d0;
+}
+
+.contact-container {
+    background-color: var(--light-grey);
+    border-radius: 30px;
+    padding: 30px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.form-control {
+    border: 1px solid var(--dark-bg);
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: var(--white);
+    width: 100%;
+    margin-right: 0;
+}
+
+.contact-image {
+    position: absolute;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 110%;
+    display: none;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--dark-bg);
+    color: var(--white);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 50px 20px; 
+    margin-top: 60px;
+    text-align: center;
+}
+
+footer p {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+/* --- Logo & Branding --- */
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 180px;
+}
+
+.contact-label {
+    background: var(--primary-green);
+    color: var(--text-black);
+    padding: 3px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* --- Footer Navigation --- */
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-nav a {
+    color: var(--white);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--link-hover-green);
+    text-decoration: underline;
+}
+
+a.privacy-link {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+a.privacy-link:hover {
+    color: var(--link-hover-green);
+}
+
+/* --- Subscribe Box --- */
+.subscribe-box {
+    background-color: var(--footer-box-bg);
+    padding: 25px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subscribe-box .form-control {
+    background: transparent !important;
+    border: 1px solid var(--white) !important;
+    color: var(--white) !important;
+    width: 100%;
+    margin-right: 0;
+}
+
+.subscribe-btn {
+    background-color: var(--primary-green);
+    color: var(--text-black);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* --- Bottom Row (Copyright, Socials, Privacy) --- */
+.bottom-row {
+    border-top: 1px solid var(--footer-line-color);
+    padding-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* Stacked on Mobile */
+    text-align: center;
+    gap: 15px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center; /* Center socials on Mobile */
+    gap: 12px;
+    /* Responsive contact items confirmed by using flex/gap and no fixed widths */
+}
+
+.footer-socials a {
+    background: var(--white);
+    color: var(--text-black);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    background: var(--primary-green);
+}
+@media (min-width: 576px) {
+    /* Subscribe Box - Row Layout */
+    .subscribe-box {
+        flex-direction: row;
+        align-items: center;
+        padding: 35px;
+    }
+    .subscribe-btn {
+        width: auto;
+    }
+
+    /* Custom Accordion Mobile Fix */
+    .custom-acc .accordion-button {
+        padding: 18px;
+        font-size: 17px;
+    }
+    .acc-number {
+        font-size: 20px;
+    }
+    .custom-acc .accordion-body {
+        padding: 15px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Global */
+    .btn-primary-custom {
+        width: auto;
+        margin-bottom: 0; /* Remove vertical spacing when they are in a row */
+    }
+    .btn-outline-custom {
+        margin-bottom: 0; /* Remove vertical spacing when they are in a row */
+    }
+    .section-heading-wrapper {
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .section-heading {
+        font-size: 2rem;
+    }
+    .section-subtext {
+        text-align: left;
+    }
+    /* Service Cards */
+    .service-card {
+        flex-direction: row;
+        align-items: center;
+    }
+    .service-icon-link {
+        align-self: center;
+    }
+    /* Accordion */
+    .accordion-button {
+        font-size: 1.2rem;
+        padding: 30px;
+    }
+    .process-num {
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+    /* Footer Navigation - Center Row Layout */
+    .footer-nav {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Hero */
+    .hero-title {
+        font-size: 3.5rem;
+        text-align: left;
+    }
+    .hero-desc {
+        text-align: left;
+    }
+    .hero-img {
+        max-width: 100%;
+    }
+    /* Contact */
+    .contact-container {
+        padding: 50px;
+        border-radius: 40px;
+    }
+    .contact-image {
+        display: block;
+    }
+    /* Footer - Desktop Layout */
+    footer {
+        text-align: left;
+        padding: 60px 40px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+    .footer-nav {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+    /* Bottom Row - Spaced Row Layout */
+    .bottom-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    .footer-socials {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1200px) {
+    .service-bg-img {
+        display: block;
+    }
+    .service-label {
+        font-size: 1.4rem;
+    }
+}
