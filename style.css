@@ -478,6 +478,7 @@ a.privacy-link:hover {
         padding: 15px 18px;
         font-size: 14px;
     }
+
 }
 
 @media (min-width: 768px) {
@@ -522,6 +523,7 @@ a.privacy-link:hover {
         justify-content: center;
         text-align: left;
     }
+
 }
 
 @media (min-width: 992px) {
@@ -574,4 +576,14 @@ a.privacy-link:hover {
     .service-label {
         font-size: 1.4rem;
     }
+
+}
+@media (max-width: 575px) {
+  a.btn.btn-dark {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   padding: 10px 20px 10px 20px;
+
+} 
 }
